@@ -1,0 +1,35 @@
+{
+    "JS - Ajax HTTP": {
+        "prefix": "ajax",
+        "body": ["let ${1:xhr} = new XMLHttpRequest();", "let url = \"${2:link}\";", "${1:xhr}.open(\"${3|POST,GET,PUT,DELETE,HEAD,OPTIONS,CONNECT,TRACE|}\", url, true);", "${1:xhr}.onreadystatechange = () => {", "     if (this.readyState === 4 && this.status === 200) {", "         ${4:console.log(\"berhasil\");}", "     }", "};", "${1:xhr}.send(${5:$formData});"],
+        "description": "JS - Ajax HTTP"
+    },
+    "JS - Fetch HTTP": {
+        "prefix": "fetch",
+        "body": [
+            "let url = '${1:link}';",
+            "const param = {",
+            "    method: '${2|GET,POST,PUT,DELETE|}',",
+            "    body: ${3:formData},",
+            "    mode: '${4|cors,no-cors,same-origin|}',",
+            "    cache: '${5|default,no-cache,reload,force-cache,only-if-cached|}',",
+            "    credentials: '${6|same-origin,include,omit|}',",
+            "    headers: {",
+            "        'Content-Type': '${7|application/json,application/x-www-form-urlencoded,text/plain,text/html,image/jpeg,image/png,application/octet-stream,multipart/form-data,application/xml,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,video/mp4,audio/mpeg,application/zip,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/javascript,image/gif,audio/x-wav,video/quicktime|}',",
+            "    },",
+            "    redirect: '${8|follow,manual,error|}',",
+            "    referrerPolicy: '${9|no-referrer,no-referrer|}',",
+            "};",
+            "fetch(url, param)",
+            "    .then((response) => response.json())",
+            "    .then((data) => {${10:console.log(data)}})",
+            "    .catch((err) => console.log(err));"
+        ],
+        "description": "JS - Fetch HTTP"
+    },
+    "JS - Form Data": {
+        "prefix": "formdata",
+        "body": ["const data = { ${1:nama, file} };", "const formData = new FormData();", "", "for (let key in data) {", "    formData.append(key, data[key]);", "}${0}"],
+        "description": "JS - Form Data"
+    }
+}
