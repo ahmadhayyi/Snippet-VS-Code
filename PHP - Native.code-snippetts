@@ -1,0 +1,77 @@
+{
+    "PHP Get": {
+        "prefix": "get",
+        "body": ["$$_GET['${1}'] ${2}"],
+        "description": "PHP Get"
+    },
+    "PHP Post": {
+        "prefix": "post",
+        "body": ["$$_POST['${1}']; ${2}"],
+        "description": "PHP Post"
+    },
+    "PHP Tag": {
+        "prefix": "php",
+        "body": ["<?php $1 ?>"],
+        "description": "PHP Tag"
+    },
+    "PHP Echo": {
+        "prefix": "phpp",
+        "body": ["<?= $$1; ?>"],
+        "description": "PHP Echo"
+    },
+    "PHP Arrow": {
+        "prefix": "--",
+        "body": ["=> ${1}"],
+        "description": "PHP Arrow"
+    },
+    "PHP Isset": {
+        "prefix": "is",
+        "body": ["isset(${1})"],
+        "description": "PHP Isset"
+    },
+    "PHP Isset Not": {
+        "prefix": "-is",
+        "body": ["! isset(${1})"],
+        "description": "PHP Isset Not"
+    },
+    "PHP Session": {
+        "prefix": "ss",
+        "body": ["$$_SESSION['${1}'];${2}"],
+        "description": "PHP Session"
+    },
+    "PHP Var Dump": {
+        "prefix": "vd",
+        "body": ["var_dump($$1);$2"],
+        "description": "PHP Var Dump"
+    },
+    "PHP Unset": {
+        "prefix": "uns",
+        "body": ["unset($$1);$2"],
+        "description": "PHP Unset"
+    },
+    "PHP Session Start Unset Destroy": {
+        "prefix": "sss",
+        "body": ["${1|session_start,session_unset,session_destroy|}();${2}"],
+        "description": "PHP Session Start"
+    },
+    "Select Function": {
+        "prefix": "selectfunction",
+        "body": ["function selectQuery($table, $columns = '*', $where = '', $sort = '', $distinct = false, $limit = null, $offset = null) {", "    $query = 'SELECT ';", "    $query .= ($distinct) ? 'DISTINCT ' : '';", "    $query .= (is_array($columns)) ? implode(',', $columns) . ' ' : $columns . ' ';", "    $query .= \"FROM $table \";", "    $query .= ($where) ? \"WHERE $where \" : '';", "    $query .= ($sort) ? \"ORDER BY $sort \" : '';", "    if ($limit) {", "        $offset = $offset ? $offset : 0;", "        $query .= \"LIMIT $offset, $limit\";", "    }", "    return $query;", "}"],
+        "description": "Select Function"
+    },
+    "Connection": {
+        "prefix": "con",
+        "body": "$$conn = mysqli_connect('${1:hostname}','${2:username}','${3:password}','${4:db-name}');",
+        "description": "'server','username','password','database'"
+    },
+    "PHP - Print Date": {
+        "prefix": "date",
+        "body": ["date('${1|d-M-Y h:i:s,d/M/Y h:i:s,d-M-Y,d/M/Y,d M Y,h:i:s,h:i,d,D,l,M,m,n,F,Y,y,h,H,g,G,i,s,a,A|}',strtotime($${2}))${3}"],
+        "description": "PHP - Print Date"
+    },
+    "PHP - Print Date Now": {
+        "prefix": "dn",
+        "body": ["date('${1|d-M-Y h:i:s,d/M/Y h:i:s,d-M-Y,d/M/Y,d M Y,h:i:s,h:i,d,D,l,M,m,n,F,Y,y,h,H,g,G,i,s,a,A|}')${3}"],
+        "description": "PHP - Print Date Now"
+    }
+}
