@@ -1,0 +1,27 @@
+{
+    "Select": {
+        "prefix": "selectquery",
+        "body": ["SELECT${1| distinct, COUNT(), COUNT(DISTINCT )|} ${3:*} FROM ${4|database,$dbname|}.${5:table}${6: WHERE id=1}${7: ORDER by name}${8: LIMIT 1,3}"],
+        "description": "Select"
+    },
+    "Insert": {
+        "prefix": "insertquery",
+        "body": ["INSERT INTO ${1|database,$dbname|}.${2:table} (${3:name,address}) VALUES (${3:name,address}) "],
+        "description": "Insert"
+    },
+    "Update": {
+        "prefix": "updatequery",
+        "body": ["UPDATE ${1|database,$dbname|}.${2:table} SET ${3:column1 = value1, column2 = value2} WHERE ${4:id=1}"],
+        "description": "Update"
+    },
+    "Delete": {
+        "prefix": "deletequery",
+        "body": ["DELETE FROM ${1|database,$dbname|}.${2:table} WHERE ${3:id=1}"],
+        "description": "Delete"
+    },
+    "Join": {
+        "prefix": "join",
+        "body": ["SELECT a.${1:order_id, a.order_date} ${2:b.customer_name, b.customer_name}", "FROM ${3:orders} AS a", "${4|INNER,LEFT,RIGHT,FULL OUTER|} JOIN ${5:customers} AS b", "ON b.${6:customer_id} = b.${7:customer_id};"],
+        "description": "Join"
+    }
+}
