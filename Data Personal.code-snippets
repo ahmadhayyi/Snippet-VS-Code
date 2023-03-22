@@ -1,0 +1,52 @@
+{
+    "Name": {
+        "prefix": "name",
+        "body": ["Ahmad Hayyilana Mirfaqo"],
+        "description": "Name"
+    },
+    "Address 1": {
+        "prefix": "address1",
+        "body": ["RT/RW 12/04 Ds. Sepaso Kec. Bengalon Kab. Kutai Timur KALTIM, 75618"],
+        "description": "Address 1"
+    },
+    "Address 2": {
+        "prefix": "address2",
+        "body": ["Rt 52 Rw 13 Ds. Sonoageng Kec. Prambon Kab. Nganjuk"],
+        "description": "Address 2"
+    },
+    "Address 3": {
+        "prefix": "address3",
+        "body": ["Jln. Terminal Makam Gusdur, Cukir GG 2 Kec. Diwek Kab. Jombang JATIM, 61471 Jombang, Jawa Timur, 61471 Indonesia"],
+        "description": "Address 3"
+    },
+    "Email 1": {
+        "prefix": "email1",
+        "body": ["ahmadhayyi33@gmail.com"],
+        "description": "Email 1"
+    },
+    "Email 2": {
+        "prefix": "email2",
+        "body": ["ahmadhayyilana@gmail.com"],
+        "description": "Email 2"
+    },
+    "Email 3": {
+        "prefix": "email3",
+        "body": ["cadanganahmad17@gmail.com"],
+        "description": "Email 3"
+    },
+    "Sim 1": {
+        "prefix": "sim1",
+        "body": ["089699508165"],
+        "description": "Sim 1"
+    },
+    "Sim 2": {
+        "prefix": "sim2",
+        "body": ["08979763614"],
+        "description": "Sim 2"
+    },
+    "Sim 3": {
+        "prefix": "sim3",
+        "body": ["087755914577"],
+        "description": "Sim 3"
+    },
+}

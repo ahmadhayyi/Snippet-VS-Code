@@ -1,0 +1,27 @@
+{
+    "getElementById": {
+        "prefix": "getid",
+        "body": ["document.getElementById('$1').${2};"],
+        "description": "getElementById"
+    },
+    "getElementsByTagName": {
+        "prefix": "gettag",
+        "body": ["document.getElementsByTagName('$1').$2;"],
+        "description": "getElementsByTagName"
+    },
+    "getElementsByClassName": {
+        "prefix": "getclass",
+        "body": ["document.getElementsByClassName('$1').$2;"],
+        "description": "getElementsByClassName"
+    },
+    "querySelector": {
+        "prefix": "qs",
+        "body": ["document.querySelector('$1').$2;"],
+        "description": "querySelector"
+    },
+    "querySelectorAll": {
+        "prefix": "qsa",
+        "body": ["document.querySelectorAll('$1').$2;"],
+        "description": "querySelectorAll"
+    }
+}

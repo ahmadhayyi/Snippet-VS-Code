@@ -1,0 +1,16 @@
+{
+	"PHP Laravel Call Seeder": {
+		"prefix": "callseeder",
+		"body": [
+		  "$$this->call(${1}::class);${2}"
+		],
+		"description": "PHP Laravel Call Seeder"
+	},
+	"PHP Laravel Call Factory": {
+		"prefix": "callfactory",
+		"body": [
+		  "${1/(.*)/${1:/capitalize}/}::factory(${2:number})->create();${3}"
+		],
+		"description": "PHP Laravel Call Factory"
+	}
+}

@@ -1,0 +1,7 @@
+{
+    "JS - JQuery Ajax HTTP": {
+        "prefix": "ajax",
+        "body": ["$.ajax({", "    url: '/${1:link}',", "    method: '${2|get,post,put,delete|}',", "    datatype: '${3:json}',", "    success: (data) => {", "        ${4}", "    },", "    error: (err) => {", "        ${5}", "    }", "});"],
+        "description": "JS - JQuery Ajax HTTP"
+    }
+}

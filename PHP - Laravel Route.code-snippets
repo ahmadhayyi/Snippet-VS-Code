@@ -1,0 +1,27 @@
+{
+    "PHP - Laravel Route Post": {
+        "prefix": "routepost",
+        "body": ["Route::post('/${1:route}', [${2:controllerName}::class, '${3:method}']);"],
+        "description": "PHP - Laravel Route Post"
+    },
+    "PHP - Laravel Route Get": {
+        "prefix": "routeget",
+        "body": ["Route::get('/${1:route}', [${2:controllerName}::class, '${3:method}']);"],
+        "description": "PHP - Laravel Route Get"
+    },
+    "PHP - Laravel Route Group": {
+        "prefix": "routelogin",
+        "body": ["Route::controller(${1:controllerName}::class)->group(function(){", "    Route::${2|get,post|}('/${3}', '${4}');", "});${0}"],
+        "description": "PHP Laravel Route Group"
+    },
+    "PHP - Laravel Route Login": {
+        "prefix": "routelogin",
+        "body": ["Route::controller(${1:LoginController}::class)->group(function(){", "    Route::${2|get,post|}('/${3:login}', '${4:index}');", "    Route::${5|post,get|}('/${6:login}', '${7:auth}')${8:->name('login')};", "});"],
+        "description": "PHP - Laravel Route Login"
+    },
+    "PHP - Laravel Route Logout": {
+        "prefix": "routelogout",
+        "body": ["Route::post('/${1:logout}', ${2:LogoutController}::class)${3:->name('logout')};"],
+        "description": "PHP - Laravel Route Logout"
+    }
+}

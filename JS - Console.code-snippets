@@ -1,0 +1,17 @@
+{
+    "JS - Console Log": {
+        "prefix": "cl",
+        "body": ["console.log(${1});"],
+        "description": "JS - Console Log"
+    },
+    "JS - Console Dir": {
+        "prefix": "cd",
+        "body": ["console.dir(${1});"],
+        "description": "JS - Console Dir"
+    },
+    "JS - Console Table": {
+        "prefix": "ct",
+        "body": ["console.table(${1});"],
+        "description": "JS - Console Table"
+    }
+}

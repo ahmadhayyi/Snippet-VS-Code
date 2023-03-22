@@ -1,0 +1,12 @@
+{
+    "PHP Laravel hasMany": {
+        "prefix": "hasmany",
+        "body": ["public function ${1}s()", "{", "    return $$this->hasMany(${1/(.*)/${1:/capitalize}/}::class${2});", "}${3}"],
+        "description": "PHP Laravel hasMany"
+    },
+    "PHP Laravel belongsTo": {
+        "prefix": "belong",
+        "body": ["public function ${1}()", "{", "    return $$this->belongsTo(${1/(.*)/${1:/capitalize}/}::class${2});", "}${3}"],
+        "description": "PHP Laravel belongsTo"
+    }
+}

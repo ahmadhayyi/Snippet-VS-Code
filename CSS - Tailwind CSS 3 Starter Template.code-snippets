@@ -1,0 +1,23 @@
+{
+	"CSS - Tailwind CSS 3 Starter Template": {
+		"prefix": "t5l",
+		"body": [
+			"<!doctype html>",
+			"<html lang=\"en\">",
+			"     <head>",
+			"          <!-- Required meta tags -->",
+			"          <meta charset=\"utf-8\">",
+			"          <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+			"",
+			"          @vite('resources/css/app.css')",
+			"",
+			"          <title>${1}</title>",
+			"     </head>",
+			"     <body>",
+			"          ${2}",
+			"     </body>",
+			"</html>"
+		],
+		"description": "CSS - Tailwind CSS 3 Starter Template"
+	}
+}

@@ -1,0 +1,7 @@
+{
+    "PHP Laravel Env": {
+        "prefix": "env",
+        "body": ["env('${1:variabel}', '${2:backup}')"],
+        "description": "PHP Laravel Env"
+    }
+}

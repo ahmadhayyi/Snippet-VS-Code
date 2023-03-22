@@ -1,0 +1,22 @@
+{
+    "Laravel PHP Method Index": {
+        "prefix": "index",
+        "body": ["public function index(){", "    return view('${1}'${2});", "}${0}"],
+        "description": "Laravel PHP Method Index"
+    },
+    "Laravel PHP Method Invoke": {
+        "prefix": "invoke",
+        "body": ["public function __invoke(){", "    return view('${1}'${2});", "}${0}"],
+        "description": "Laravel PHP Method Invoke"
+    },
+    "Laravel PHP Method Authenticate": {
+        "prefix": "auth",
+        "body": ["public function auth(Request $$request){", "    $$credentials = $$request->validate([", "         '${1|username,email|}' => '${2|required|}',", "         '${3|password|}' => '${4|required|}',", "    ]);", "    if(Auth::attempt(['${1|username,email|}' => $$credentials['${1|username,email|}'], '${3|password|}' => $$credentials['${3|password|}']])){", "         $$request->session()->regenerate();", "         return redirect()->intended('/${5}');", "     }", "     return back()->with('${6|failed,success|}', '${1|username,email|} atau ${3|password|} salah!);", "}${0}"],
+        "description": "Laravel PHP Method Authenticate"
+    },
+    "Laravel PHP Method Logout": {
+        "prefix": "logout",
+        "body": ["public function __invoke(Request $$request){", "    Auth::logout();", "    $$request->session()->invalidate();", "    $$request->session()->regenerateToken();", "    return redirect('/${1}');", "}"],
+        "description": "Laravel PHP Method Logout"
+    }
+}

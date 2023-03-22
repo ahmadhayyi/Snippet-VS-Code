@@ -1,0 +1,16 @@
+{
+	"PHP - Laravel Return Redirect": {
+		"prefix": "rere",
+		"body": [
+		  "return redirect('/${1}')->with('${2|success,failed|}', '${3}');${4}"
+		],
+		"description": "PHP - Laravel Return Redirect"
+	},
+	"PHP - Laravel Return Back": {
+		"prefix": "reback",
+		"body": [
+		  "return back()->with('${1|success,failed|}', '${2}');${3}"
+		],
+		"description": "PHP - Laravel Return Back"
+	}
+}
