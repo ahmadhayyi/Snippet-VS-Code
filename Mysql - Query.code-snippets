@@ -21,7 +21,14 @@
     },
     "Join": {
         "prefix": "join",
-        "body": ["SELECT a.${1:order_id, a.order_date} ${2:b.customer_name, b.customer_name}", "FROM ${3:orders} AS a", "${4|INNER,LEFT,RIGHT,FULL OUTER|} JOIN ${5:customers} AS b", "ON b.${6:customer_id} = b.${7:customer_id};"],
+        "body": ["SELECT a.${1:order_id, a.order_date}${2:, b.customer_name, b.customer_name}", "FROM ${3:orders} AS a", "${4|INNER,LEFT,RIGHT,FULL OUTER|} JOIN ${5:customers} AS b", "ON a.${6:customer_id} = b.${7:customer_id}"],
         "description": "Join"
+    },
+    "Reset Auto Increment ": {
+        "prefix": "resetai",
+        "body": [
+            "ALTER TABLE ${1:nama_tabel} AUTO_INCREMENT = 1;"
+        ],
+        "description": "Reset Auto Increment "
     }
 }

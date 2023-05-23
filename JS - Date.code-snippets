@@ -1,0 +1,11 @@
+{
+	"GET Date One JS": {
+	"prefix": "djs",
+	"body": [
+		"let ${2|year,month,day|} = ${1:date}.split('-')[${3|1,2,3|}];",
+		""
+	],
+	"description": "GET Date JS"
+	},
+	
+}

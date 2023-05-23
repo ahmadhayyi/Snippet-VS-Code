@@ -1,27 +1,27 @@
 {
     "getElementById": {
         "prefix": "getid",
-        "body": ["document.getElementById('$1').${2};"],
+        "body": ["let ${1:kode} = document.getElementById('${1:kode}')${2:.value};"],
         "description": "getElementById"
     },
     "getElementsByTagName": {
         "prefix": "gettag",
-        "body": ["document.getElementsByTagName('$1').$2;"],
+        "body": ["let ${1:kode} = document.getElementsByTagName('${1:kode}')${2:.value};"],
         "description": "getElementsByTagName"
     },
     "getElementsByClassName": {
         "prefix": "getclass",
-        "body": ["document.getElementsByClassName('$1').$2;"],
+        "body": ["let ${1:kode} = document.getElementsByClassName('${1:kode}')${2:.value};"],
         "description": "getElementsByClassName"
     },
     "querySelector": {
         "prefix": "qs",
-        "body": ["document.querySelector('$1').$2;"],
+        "body": ["let ${1:kode} = document.querySelector('${1:kode}')${2:.value};"],
         "description": "querySelector"
     },
     "querySelectorAll": {
         "prefix": "qsa",
-        "body": ["document.querySelectorAll('$1').$2;"],
+        "body": ["let ${1:kode} = document.querySelectorAll('${1:kode}')${2:.value};"],
         "description": "querySelectorAll"
     }
 }

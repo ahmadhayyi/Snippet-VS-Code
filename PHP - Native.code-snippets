@@ -71,12 +71,12 @@
     },
     "PHP - Print Date": {
         "prefix": "date",
-        "body": ["date('${1|d-M-Y h:i:s,d/M/Y h:i:s,d-M-Y,d/M/Y,d M Y,h:i:s,h:i,d,D,l,M,m,n,F,Y,y,h,H,g,G,i,s,a,A|}',strtotime($${2}))${3}"],
+        "body": ["date('${1|d-m-Y,Y-m-d,d-m-Y h:i:s,d/M/Y h:i:s,d-m-Y,d/M/Y,d M Y,h:i:s,h:i,d,D,l,M,m,n,F,Y,y,h,H,g,G,i,s,a,A|}',strtotime($${2}))${3}"],
         "description": "PHP - Print Date"
     },
     "PHP - Print Date Now": {
         "prefix": "dn",
-        "body": ["date('${1|d-M-Y h:i:s,d/M/Y h:i:s,d-M-Y,d/M/Y,d M Y,h:i:s,h:i,d,D,l,M,m,n,F,Y,y,h,H,g,G,i,s,a,A|}')${3}"],
+        "body": ["date('${1|d-m-Y,Y-m-d,d-m-Y h:i:s,d/M/Y h:i:s,d-m-Y,d/M/Y,d M Y,h:i:s,h:i,d,D,l,M,m,n,F,Y,y,h,H,g,G,i,s,a,A|}')${3}"],
         "description": "PHP - Print Date Now"
     },
    "Echo": {
@@ -87,16 +87,16 @@
   "description": "Echo"
 } ,
 "Concat": {
-  "prefix": "cc",
+  "prefix": "pp",
   "body": [
-    "\" . $${1:dbname} . \""
+    "\".$${1:dbname}.\""
   ],
   "description": "Concat"
 },
 "Concat plus": {
-  "prefix": "ccc",
+  "prefix": "ppp",
   "body": [
-    "'\" . $${1:dbname} . \"'"
+    "'\".$${1:dbname}.\"'"
   ],
   "description": "Concat plus"
 },
@@ -106,5 +106,13 @@
     "case '${1|insert,preview,update,delete,load data|}':"
   ],
   "description": "Case"
+},
+"Default Break": {
+  "prefix": "def",
+  "body": [
+    "default:",
+    "break;"
+  ],
+  "description": "Default Break"
 }
 }
