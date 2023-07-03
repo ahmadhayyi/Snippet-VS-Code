@@ -1,27 +1,27 @@
 {
     "getElementById": {
         "prefix": "getid",
-        "body": ["let ${1:kode} = document.getElementById('${1:kode}')${2:.value};"],
+        "body": ["${1:kode} = document.getElementById('${1:kode}')${2:.value};"],
         "description": "getElementById"
     },
     "getElementsByTagName": {
         "prefix": "gettag",
-        "body": ["let ${1:kode} = document.getElementsByTagName('${1:kode}')${2:.value};"],
+        "body": ["${1:kode} = document.getElementsByTagName('${1:kode}')${2:.value};"],
         "description": "getElementsByTagName"
     },
     "getElementsByClassName": {
         "prefix": "getclass",
-        "body": ["let ${1:kode} = document.getElementsByClassName('${1:kode}')${2:.value};"],
+        "body": ["${1:kode} = document.getElementsByClassName('${1:kode}')${2:.value};"],
         "description": "getElementsByClassName"
     },
     "querySelector": {
         "prefix": "qs",
-        "body": ["let ${1:kode} = document.querySelector('${1:kode}')${2:.value};"],
+        "body": ["${1:kode} = document.querySelector('${1:kode}')${2:.value};"],
         "description": "querySelector"
     },
     "querySelectorAll": {
         "prefix": "qsa",
-        "body": ["let ${1:kode} = document.querySelectorAll('${1:kode}')${2:.value};"],
+        "body": ["${1:kode} = document.querySelectorAll('${1:kode}')${2:.value};"],
         "description": "querySelectorAll"
     }
 }

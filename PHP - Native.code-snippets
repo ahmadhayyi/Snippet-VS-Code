@@ -100,12 +100,14 @@
   ],
   "description": "Concat plus"
 },
-"Case": {
+"Case Break;": {
   "prefix": "cs",
   "body": [
-    "case '${1|insert,preview,update,delete,load data|}':"
+    "case '${1|insert,preview,update,delete,load data|}':",
+    "    ${2}",
+    "break;"
   ],
-  "description": "Case"
+  "description": "Case Break;"
 },
 "Default Break": {
   "prefix": "def",
